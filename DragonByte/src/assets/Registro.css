@@ -1,0 +1,154 @@
+/* --- 1. FONDO GLOBAL PARA TODA LA APP --- */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('./img/bg-register.jpeg'); /* Asegúrate de que este nombre sea correcto */
+    background-size: cover;
+    background-position: top center; 
+    background-attachment: fixed;
+    background-color: #1e0232; /* Color de respaldo oscuro */
+}
+
+/* --- 2. EL LAYOUT DE TU FORMULARIO --- */
+.register {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; /* Esto le dice que se pegue a la izquierda */
+    padding-left: 8%; /* Usamos porcentaje para que se adapte a cualquier pantalla */
+    position: relative; 
+    z-index: 1;
+    min-height: 85vh;
+    width: 100%; /* ¡LA CLAVE! Le decimos que ocupe toda la pantalla */
+    box-sizing: border-box; /* Evita que el padding nos cree una barra de scroll horizontal */
+}
+
+
+/* --- 3. TU DISEÑO ORIGINAL (INTACTO) --- */
+.register-container {
+    background-color: rgba(188, 106, 184, 0.85); 
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 580px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+}
+
+.register-title {
+    color: #1e0232;
+    font-size: 2em; 
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-align: center; 
+}
+
+.register-container .form-group {
+    margin-bottom: 18px;
+}
+
+.register-container .form-group label,
+.register-container fieldset legend.dob-legend {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #e0e0e0; 
+}
+
+.register-container fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px; 
+}
+
+.register-container fieldset legend.dob-legend {
+    font-size: 1.05em; 
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.dob-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; 
+}
+
+.dob-group > div {
+    flex: 1; 
+}
+
+.register-container .form-control {
+    background-color: #3B2F50; 
+    border: 1px solid #5A4D70; 
+    border-radius: 8px;
+    color: #ffffff; 
+    padding: 10px 15px; 
+    font-size: 1em;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.register-container .form-control::placeholder {
+    color: #B0A5C8; 
+    opacity: 0.8; 
+}
+
+.register-container .form-control:focus {
+    background-color: #45385E; 
+    color: #ffffff;
+    border-color: #db5cc8; 
+    box-shadow: 0 0 0 0.2rem rgba(219, 92, 200, 0.25); 
+}
+
+.btn-register, .btn-return {
+    padding: 10px 0; 
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: block; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease, transform 0.1s ease, border-color 0.3s ease;
+}
+
+.btn-register {
+    background-color: #5D3B8C; 
+    color: #ffffff;
+    border: none;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.btn-register:hover {
+    background-color: #4B2E70; 
+    transform: translateY(-1px); 
+}
+
+.btn-return {
+    background-color: transparent; 
+    color: #1e0232;
+    font-style: italic;
+    font-size: smaller;
+    padding: 5px !important;
+}
+
+.btn-return:hover {
+    background-color: rgba(90, 77, 112, 0.3);
+    border-color: #a090bc;
+    color: #fbf9fd;
+}
+
+.register-container select.form-control {
+    color: #ffffff;
+}
+
+.register-container select.form-control option {
+    background-color: #3B2F50;
+    color: #ffffff;
+}
