@@ -1,21 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import FormularioRegistro from './views/FormularioRegistro';
+import ListaUsuarios from './views/ListaUsuarios';
+import './assets/Registro.css'; 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [vistaActual, setVistaActual] = useState('formulario'); 
 
   return (
-    <>
-      <div>
-       
-       
-      </div>
-     
+    
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      
+      <Navbar setVistaActual={setVistaActual} />
+      
+      {}
+      <main style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+        {vistaActual === 'formulario' ? <FormularioRegistro /> : <ListaUsuarios />}
+      </main>
 
-    </>
-  )
+      <Footer />
+
+    </div>
+  );
 }
 
-export default App
+export default App;
+
