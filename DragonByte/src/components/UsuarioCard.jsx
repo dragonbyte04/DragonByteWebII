@@ -4,9 +4,9 @@ const UsuarioCard = ({ usuario }) => {
   return (
     <div style={{ 
       border: '1px solid #db5cc8', 
-      padding: '25px', /* Subimos un poco el padding */
+      padding: '25px', 
       borderRadius: '15px', 
-      minWidth: '240px', /* Un poco más anchas */
+      minWidth: '240px', 
       backgroundColor: 'rgba(30, 2, 50, 0.8)',
       color: 'white',
       textAlign: 'center',
@@ -19,17 +19,15 @@ const UsuarioCard = ({ usuario }) => {
           src={usuario.imagen} 
           alt={usuario.nombre} 
           style={{ 
-            width: '120px', /* Un poco más grande */
+            width: '120px', 
             height: '120px', 
             borderRadius: '50%',
-            // LA CLAVE: 'contain' muestra el logo entero y reduce la pixelación
             objectFit: 'contain', 
-            // Agregamos un fondo blanco y padding al logo para que resalte
             backgroundColor: '#ffffff', 
             padding: '5px',
             marginBottom: '20px', 
             border: '4px solid #db5cc8',
-            boxShadow: '0 0 15px rgba(219, 92, 200, 0.5)' /* Brillo */
+            boxShadow: '0 0 15px rgba(219, 92, 200, 0.5)' 
           }} 
         />
       )}
