@@ -14,7 +14,7 @@ const ListaUsuarios = () => {
   ]);
 
   return (
-    // Agregamos paddingTop para bajar la sección y paddingBottom por estética
+    
     <div style={{ padding: '20px', paddingTop: '100px', paddingBottom: '50px', width: '100%' }}>
       <h2 style={{ color: 'white', textAlign: 'center', marginBottom: '40px', fontSize: '2.5em', textTransform: 'uppercase', letterSpacing: '2px' }}>
         DragonByte Team
