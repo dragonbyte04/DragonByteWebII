@@ -1,27 +1,24 @@
-import { useState } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import FormularioRegistro from './views/FormularioRegistro';
 import ListaUsuarios from './views/ListaUsuarios';
-import './assets/Registro.css'; 
+import Login from './views/Login';
+import NoEncontrado from './views/NoEncontrado'; 
+import PaginaPrincipal from './views/PaginaPrincipal';
 
 function App() {
-  const [vistaActual, setVistaActual] = useState('formulario'); 
-
   return (
-    
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      
-      <Navbar setVistaActual={setVistaActual} />
-      
-      {}
-      <main style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-        {vistaActual === 'formulario' ? <FormularioRegistro /> : <ListaUsuarios />}
-      </main>
-
-      <Footer />
-
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/registro" element={<FormularioRegistro />} />
+          <Route path="/comunidad" element={<ListaUsuarios />} />
+          <Route path="/principal" element={<PaginaPrincipal />} />
+          <Route path="*" element={<NoEncontrado />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
