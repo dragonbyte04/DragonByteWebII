@@ -5,7 +5,7 @@ const NoEncontrado = () => {
     <div className="vista-error" style={{ textAlign: 'center', padding: '50px', color: 'white' }}>
       <h1 style={{ fontSize: '4rem', color: '#ff4444', margin: '0' }}>404</h1>
       <h2>Página no encontrada</h2>
-      <p>Parece que te perdiste en el sistema. La ruta que buscas no existe.</p>
+      <p>Te equivocaste de página. La ruta que buscas no existe.</p>
       
       
       <Link to="/" style={{
